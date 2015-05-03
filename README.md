@@ -1,11 +1,11 @@
-# pager
+# PagerApp
 
-## Pager is comming to the wide web soon...
+### Pager is comming to the world wide web soon...
 
 However, the curious ones can set everything up locally, as described below.
 
 
-## Setup
+### Setup
 
 1. Install dependencies:
 
