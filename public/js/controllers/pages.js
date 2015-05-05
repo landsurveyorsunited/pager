@@ -1,12 +1,15 @@
 angular.module('pager')
 
 .controller('PagesCtrl', function($q, $scope, $state, $facebook, User, Api) {
+  
   // Default values
 	$scope.pages = [];
 	$scope.sites = [];
 
   function getPageData(pages) {
     pages.map(function(page) {
+      
+      // Get Facebook page general information
       $facebook.api(page.id).then(function(response) {
         var data = {
           id: response.id,
@@ -63,6 +66,7 @@ angular.module('pager')
 		return false;
 	};
 
+  // Redirect to a page's edit page
   $scope.editPage = function(page) {
     $state.go('app.edit', { id: page.id });
   };

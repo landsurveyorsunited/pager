@@ -16,6 +16,7 @@ angular.module('pager')
     $scope.options[option] = !$scope.options[option];
   };
 
+  // Redirect to a page website
   $scope.viewPage = function() {
     $state.go('app.site', { id: pageID });
   };

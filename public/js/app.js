@@ -8,19 +8,21 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
   // Setup local storage
   localStorageServiceProvider.setPrefix('pager');
 
+  //URL routing
+  
   $stateProvider
     .state('app', {
       abstract: true,
       templateUrl: 'public/views/layout.html'
     })
-
+    // Home Page
     .state('home', {
       url: '/',
       title: 'Home',
       templateUrl: 'public/views/index.html',
       controller: 'HomeCtrl'
     })
-
+    // App Landing Page
     .state('app.pages', {
       url: '/pages',
       title: 'Pages',
@@ -35,7 +37,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
         },
       }
     })
-
+    // Edit Page
     .state('app.edit', {
       url: '/pages/:id',
       title: 'Edit Page',
@@ -51,7 +53,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
         },
       }
     })
-
+    // Website Page
     .state('app.site', {
       url: '/sites/:id',
       params: { id: null },
@@ -62,7 +64,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
         },
       }
     })
-
+    // Website Page - About
     .state('app.site-about', {
       url: '/sites/:id/about',
       params: { id: null },
@@ -77,7 +79,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
         },
       }
     })
-
+    // Website Page - News
     .state('app.site-news', {
       url: '/sites/:id/news',
       params: { id: null },
@@ -92,7 +94,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
         },
       }
     })
-
+    // Website Page - Event
     .state('app.site-events', {
       url: '/sites/:id/events',
       params: { id: null },
@@ -107,7 +109,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
         },
       }
     })
-
+    // Website Page - Gallery
     .state('app.site-gallery', {
       url: '/sites/:id/gallery',
       params: { id: null },
