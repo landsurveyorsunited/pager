@@ -245,6 +245,10 @@ body {
   color: white;
 }
 
+a:hover .announcement, a:focus .announcement, a:active .announcement {
+  text-decoration: none;
+}
+
 .site {
   font-family: Lato, sans-serif; }
   .site .intro {
